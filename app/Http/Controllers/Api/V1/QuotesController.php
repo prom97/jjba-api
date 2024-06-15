@@ -39,7 +39,7 @@ class QuotesController extends Controller
         $res = "";
         $quotes = Quotes::find($id);
         if(!empty($quotes)){
-            $res = response->json($quotes);
+            $res = response()->json($quotes);
         }else{
             $res = response()->json([
                 "message" => "Register not found."
